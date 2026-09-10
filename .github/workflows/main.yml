@@ -8,8 +8,7 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Checkout repository
@@ -21,7 +20,7 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore CybersecurityAwarenessBot/CybersecurityAwarenessBot.csproj
+      run: dotnet restore CyberSecurityAwarenessBot/CyberSecurityAwarenessBot.csproj
 
     - name: Build project
-      run: dotnet build CybersecurityAwarenessBot/CybersecurityAwarenessBot.csproj --no-restore
+      run: dotnet build CyberSecurityAwarenessBot/CyberSecurityAwarenessBot.csproj --no-restore
