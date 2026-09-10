@@ -1,4 +1,4 @@
-﻿u// ResponseHandler.cs
+﻿// ResponseHandler.cs
 // Receives the user's input and identifies what cybersecurity topic they are asking about.
 // Uses keyword matching and menu numbers to provide a relevant response.
 
