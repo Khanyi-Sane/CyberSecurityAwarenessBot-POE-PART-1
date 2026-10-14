@@ -42,7 +42,7 @@
             rtbBanner.Location = new Point(0, 0);
             rtbBanner.Name = "rtbBanner";
             rtbBanner.ReadOnly = true;
-            rtbBanner.Size = new Size(1374, 149);
+            rtbBanner.Size = new Size(1374, 173);
             rtbBanner.TabIndex = 0;
             rtbBanner.Text = "";
             rtbBanner.UseWaitCursor = true;
@@ -51,10 +51,10 @@
             // rtbChatHistory
             // 
             rtbChatHistory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            rtbChatHistory.Location = new Point(0, 155);
+            rtbChatHistory.Location = new Point(0, 179);
             rtbChatHistory.Name = "rtbChatHistory";
             rtbChatHistory.ReadOnly = true;
-            rtbChatHistory.Size = new Size(1374, 537);
+            rtbChatHistory.Size = new Size(1374, 605);
             rtbChatHistory.TabIndex = 1;
             rtbChatHistory.Text = "";
             rtbChatHistory.UseWaitCursor = true;
@@ -62,7 +62,7 @@
             // txtUserInput
             // 
             txtUserInput.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtUserInput.Location = new Point(12, 717);
+            txtUserInput.Location = new Point(27, 801);
             txtUserInput.Name = "txtUserInput";
             txtUserInput.Size = new Size(890, 27);
             txtUserInput.TabIndex = 2;
@@ -71,7 +71,7 @@
             // btnSend
             // 
             btnSend.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnSend.Location = new Point(1192, 696);
+            btnSend.Location = new Point(1181, 790);
             btnSend.Name = "btnSend";
             btnSend.Size = new Size(151, 48);
             btnSend.TabIndex = 3;
