@@ -101,7 +101,6 @@
         private RichTextBox rtbBanner;
         private RichTextBox rtbChatHistory;
         private TextBox txtUserInput;
-        private Button Send;
         private Button btnSend;
     }
 }
