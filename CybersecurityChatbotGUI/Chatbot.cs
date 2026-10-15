@@ -27,7 +27,7 @@ public class Chatbot
     public void Start()
     {
         _voiceGreeting.PlayGreeting();
-        Say("Hello! Welcome to the Cybersecurity Awareness Bot (v2).");
+        Say("Hello! Welcome to the Cybersecurity Awareness Bot.");
         Say("Before we begin, what is your name?");
     }
 
