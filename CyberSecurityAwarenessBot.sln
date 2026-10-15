@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberSecurityAwarenessBot", "CyberSecurityAwarenessBot\CyberSecurityAwarenessBot.csproj", "{BCE1BA17-6AD4-4D1A-9E7E-14FE71A37BD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CybersecurityChatbotGUI", "CybersecurityChatbotGUI\CybersecurityChatbotGUI.csproj", "{0DB86419-E84B-889E-0052-D2071D686C99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCE1BA17-6AD4-4D1A-9E7E-14FE71A37BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE1BA17-6AD4-4D1A-9E7E-14FE71A37BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE1BA17-6AD4-4D1A-9E7E-14FE71A37BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE1BA17-6AD4-4D1A-9E7E-14FE71A37BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DB86419-E84B-889E-0052-D2071D686C99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DB86419-E84B-889E-0052-D2071D686C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DB86419-E84B-889E-0052-D2071D686C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DB86419-E84B-889E-0052-D2071D686C99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67CB74DA-0B9C-4DFA-BF80-7ECD0A2D267C}
+	EndGlobalSection
+EndGlobal
