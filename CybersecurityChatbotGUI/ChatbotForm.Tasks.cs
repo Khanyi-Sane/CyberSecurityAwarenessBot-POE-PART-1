@@ -236,6 +236,13 @@ namespace CybersecurityChatbotGUI
             {
                 _taskRepository.AddTask(task);
 
+                // NEW: record the action (and the reminder, if there is one) in the activity log
+                LogActivity("Task added: " + task.Title);
+                if (task.ReminderDate.HasValue)
+                {
+                    LogActivity("Reminder set: " + task.Title + " on " + task.ReminderDate.Value.ToString("dd MMM yyyy"));
+                }
+
                 txtTaskTitle.Clear();
                 txtTaskDescription.Clear();
                 chkUseReminder.Checked = false;
@@ -268,6 +275,7 @@ namespace CybersecurityChatbotGUI
             try
             {
                 _taskRepository.MarkTaskCompleted(task.TaskId);
+                LogActivity("Task completed: " + task.Title); // NEW
                 LoadTasks();
                 ShowTaskStatus("Task marked as completed.", false);
             }
@@ -300,6 +308,7 @@ namespace CybersecurityChatbotGUI
             try
             {
                 _taskRepository.DeleteTask(task.TaskId);
+                LogActivity("Task deleted: " + task.Title); // NEW
                 LoadTasks();
                 ShowTaskStatus("Task deleted.", false);
             }

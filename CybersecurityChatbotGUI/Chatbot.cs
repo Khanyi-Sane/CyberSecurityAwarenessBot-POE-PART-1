@@ -18,6 +18,12 @@ public class Chatbot
     // Read-only property that hands the logo text to the form.
     public string Logo => _asciiArt.GetLogo();
 
+    // NEW: lets the form know whether the user has given their name yet.
+    public bool HasName => _userProfile.Name != "";
+
+    // NEW: lets the form use the user's name in replies.
+    public string UserName => _userProfile.Name;
+
     // The bot "speaks" through the delegate and never touches the form directly.
     private void Say(string message)
     {

@@ -17,7 +17,9 @@ namespace CybersecurityChatbotGUI
         {
             InitializeComponent(); // builds the controls. Never delete this.
 
-            BuildTasksTab(); // NEW: builds the Task Assistant tab (see ChatbotForm.Tasks.cs)
+            BuildTasksTab();    // builds the Task Assistant tab (see ChatbotForm.Tasks.cs)
+            BuildActivityTab(); // builds the Activity Log tab (see ChatbotForm.Activity.cs)
+            BuildQuizTab();     // builds the Cyber Quiz tab (see ChatbotForm.Quiz.cs)
 
             ApplyTheme();
 
@@ -73,7 +75,7 @@ namespace CybersecurityChatbotGUI
 
         private void ChatbotForm_Load(object? sender, EventArgs e)
         {
-            LoadTasks(); // NEW: show any tasks already saved in MySQL
+            LoadTasks(); // show any tasks already saved in MySQL
             rtbBanner.Text = chatBot.Logo;
             chatBot.Start();
         }
@@ -119,6 +121,15 @@ namespace CybersecurityChatbotGUI
             {
                 AppendColoured("You > ", _userColour);
                 AppendColoured(userMessage + Environment.NewLine + Environment.NewLine, _textColour);
+            }
+
+            // NEW: once we know the user's name, check for task / quiz / activity commands first.
+            // If the NLP handles the message, the normal chatbot is skipped.
+            if (userMessage != "" && chatBot.HasName && HandlePart3Command(userMessage))
+            {
+                txtUserInput.Clear();
+                txtUserInput.Focus();
+                return;
             }
 
             chatBot.ProcessInput(userMessage);
