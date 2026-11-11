@@ -15,7 +15,7 @@ namespace CybersecurityChatbotGUI
 
         public ChatbotForm()
         {
-            InitializeComponent(); // builds the controls you dragged on. Never delete this.
+            InitializeComponent(); // builds the controls. Never delete this.
 
             ApplyTheme();
 
@@ -32,6 +32,13 @@ namespace CybersecurityChatbotGUI
         private void ApplyTheme()
         {
             this.BackColor = _backgroundColour;
+
+            // NEW: tabs and the input strip share the dark background.
+            tabChat.BackColor = _backgroundColour;
+            tabTasks.BackColor = _backgroundColour;
+            tabQuiz.BackColor = _backgroundColour;
+            tabActivity.BackColor = _backgroundColour;
+            pnlInput.BackColor = _backgroundColour;
 
             // Banner: monospaced font so the ASCII art lines up.
             rtbBanner.BackColor = _backgroundColour;
