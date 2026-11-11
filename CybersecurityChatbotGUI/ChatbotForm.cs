@@ -17,6 +17,8 @@ namespace CybersecurityChatbotGUI
         {
             InitializeComponent(); // builds the controls. Never delete this.
 
+            BuildTasksTab(); // NEW: builds the Task Assistant tab (see ChatbotForm.Tasks.cs)
+
             ApplyTheme();
 
             // THE DELEGATE: point it at the method that displays messages.
@@ -33,7 +35,7 @@ namespace CybersecurityChatbotGUI
         {
             this.BackColor = _backgroundColour;
 
-            // NEW: tabs and the input strip share the dark background.
+            // Tabs and the input strip share the dark background.
             tabChat.BackColor = _backgroundColour;
             tabTasks.BackColor = _backgroundColour;
             tabQuiz.BackColor = _backgroundColour;
@@ -71,6 +73,7 @@ namespace CybersecurityChatbotGUI
 
         private void ChatbotForm_Load(object? sender, EventArgs e)
         {
+            LoadTasks(); // NEW: show any tasks already saved in MySQL
             rtbBanner.Text = chatBot.Logo;
             chatBot.Start();
         }
